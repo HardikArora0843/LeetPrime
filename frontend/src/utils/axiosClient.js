@@ -1,13 +1,13 @@
-import axios from "axios"
+import axios from "axios";
 
-const axiosClient =  axios.create({
-    baseURL: process.env.REACT_APP_BACKEND_URL,
-    withCredentials: true,
-    headers: {
-        'Content-Type': 'application/json'
-    }
+console.log("BASE URL:", process.env.REACT_APP_BACKEND_URL); // ✅ helpful debug log
+
+const axiosClient = axios.create({
+  baseURL: process.env.REACT_APP_BACKEND_URL,
+  withCredentials: true,
+  headers: {
+    'Content-Type': 'application/json'
+  }
 });
 
-
 export default axiosClient;
-
