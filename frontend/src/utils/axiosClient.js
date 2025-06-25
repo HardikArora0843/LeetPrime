@@ -1,9 +1,9 @@
 import axios from "axios";
 
-console.log("BASE URL:", process.env.REACT_APP_BACKEND_URL); // ✅ helpful debug log
+console.log("BASE URL:", import.meta.env.VITE_BACKEND_URL); // ✅ Vite syntax
 
 const axiosClient = axios.create({
-  baseURL: process.env.REACT_APP_BACKEND_URL,
+  baseURL: import.meta.env.VITE_BACKEND_URL, // ✅ Vite syntax
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json'
